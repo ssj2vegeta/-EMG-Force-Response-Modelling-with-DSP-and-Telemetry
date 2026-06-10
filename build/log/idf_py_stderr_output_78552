@@ -1,0 +1,86 @@
+Command: C:\esp\tools\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe C:\Users\haziq\esp\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\haziq\CLionProjects\EMG+DSP+Telemetry\build\EMG+DSP+Telemetry.elf C:\Users\haziq\CLionProjects\EMG+DSP+Telemetry\build\bootloader\bootloader.elf --force-color -m 'C:\esp\tools\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'C:\Users\haziq\esp\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2259[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x400e07e2: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e0bc0: [0;33mtask_wdt_isr[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x4008349d: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1264[0m
+[0m--- 0x400d676c: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_hal_uart/esp32/include/hal/uart_ll.h[0m[0m:[1;31m472[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x400d6a38: [0;33muart_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x400d209d: [0;33mconsole_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_stdio/stdio_vfs.c[0m[0m:[1;31m95[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x40166289: [0;33mbufio_write[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/stdio_private.h[0m[0m:[1;31m183[0m
+[0m--- (inlined by) [0;33m__bufio_flush_locked[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m62[0m
+[0m--- 0x4015f8de: [0;33m__bufio_put[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m187[0m
+[0m--- 0x4016004d: [0;33mvfprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vfprintf.c[0m[0m:[1;31m581[0m
+[0m--- 0x40160aeb: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vprintf.c[0m[0m:[1;31m38[0m
+[0m--- 0x4008cd3f: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x400de611: [0;33moutbox_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/lib/mqtt_outbox.c[0m[0m:[1;31m45[0m
+[0m--- 0x400dd0d3: [0;33mmqtt_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m1241[0m
+[0m--- 0x400dd171: [0;33mmqtt_client_enqueue_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2146[0m
+[0m--- 0x400ddec5: [0;33mesp_mqtt_client_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2200[0m
+[0m--- 0x400db6f1: [0;33mpublish_task[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/main/network.c[0m[0m:[1;31m158[0m
+[0m--- 0x4016a6f2: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x400e07e2: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e0bc0: [0;33mtask_wdt_isr[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x4008349d: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1264[0m
+[0m--- 0x400d6769: [0;33muart_tx_char[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m188[0m
+[0m--- 0x400d6a38: [0;33muart_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x400d209d: [0;33mconsole_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_stdio/stdio_vfs.c[0m[0m:[1;31m95[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x40166289: [0;33mbufio_write[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/stdio_private.h[0m[0m:[1;31m183[0m
+[0m--- (inlined by) [0;33m__bufio_flush_locked[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m62[0m
+[0m--- 0x4015f8de: [0;33m__bufio_put[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m187[0m
+[0m--- 0x4016004d: [0;33mvfprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vfprintf.c[0m[0m:[1;31m581[0m
+[0m--- 0x40160aeb: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vprintf.c[0m[0m:[1;31m38[0m
+[0m--- 0x4008cd3f: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x400de611: [0;33moutbox_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/lib/mqtt_outbox.c[0m[0m:[1;31m45[0m
+[0m--- 0x400dd0d3: [0;33mmqtt_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m1241[0m
+[0m--- 0x400dd171: [0;33mmqtt_client_enqueue_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2146[0m
+[0m--- 0x400ddec5: [0;33mesp_mqtt_client_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2200[0m
+[0m--- 0x400db6f1: [0;33mpublish_task[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/main/network.c[0m[0m:[1;31m158[0m
+[0m--- 0x4016a6f2: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x400e07e2: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e0bc0: [0;33mtask_wdt_isr[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x4008349d: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1264[0m
+[0m--- 0x400d6773: [0;33muart_ll_get_txfifo_len[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_hal_uart/esp32/include/hal/uart_ll.h[0m[0m:[1;31m472[0m
+[0m--- (inlined by) [0;33muart_tx_char[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m190[0m
+[0m--- 0x400d6a38: [0;33muart_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m245[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x400d209d: [0;33mconsole_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_stdio/stdio_vfs.c[0m[0m:[1;31m95[0m
+[0m--- 0x400da9d1: [0;33mesp_vfs_write[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/vfs/vfs_calls.c[0m[0m:[1;31m74[0m
+[0m--- 0x400d58d2: [0;33mwrite[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_libc/src/syscalls.c[0m[0m:[1;31m51[0m
+[0m--- 0x40166289: [0;33mbufio_write[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/stdio_private.h[0m[0m:[1;31m183[0m
+[0m--- (inlined by) [0;33m__bufio_flush_locked[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m62[0m
+[0m--- 0x4015f8de: [0;33m__bufio_put[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/bufio.c[0m[0m:[1;31m187[0m
+[0m--- 0x4016004d: [0;33mvfprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vfprintf.c[0m[0m:[1;31m581[0m
+[0m--- 0x40160aeb: [0;33mvprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vprintf.c[0m[0m:[1;31m38[0m
+[0m--- 0x4008cd3f: [0;33mesp_log_va[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m43[0m
+[0m--- (inlined by) [0;33mesp_log[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/log/src/log.c[0m[0m:[1;31m88[0m
+[0m--- 0x400de662: [0;33moutbox_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/lib/mqtt_outbox.c[0m[0m:[1;31m53[0m
+[0m--- 0x400dd0d3: [0;33mmqtt_enqueue[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m1241[0m
+[0m--- 0x400dd171: [0;33mmqtt_client_enqueue_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2146[0m
+[0m--- 0x400ddec5: [0;33mesp_mqtt_client_publish[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/managed_components/espressif__mqtt/mqtt_client.c[0m[0m:[1;31m2200[0m
+[0m--- 0x400db6f1: [0;33mpublish_task[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/main/network.c[0m[0m:[1;31m158[0m
+[0m--- 0x4016a6f2: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m--- 0x400e07e2: [0;33mtask_wdt_timeout_handling[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m436[0m
+[0m--- 0x400e0bc0: [0;33mtask_wdt_isr[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c[0m[0m:[1;31m509[0m
+[0m--- 0x4008349d: [0;33m_xt_lowint1[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1264[0m
+[0m--- 0x4016032e: [0;33mvfprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/vfprintf.c[0m[0m:[1;31m833[0m
+[0m--- 0x4015fbda: [0;33msnprintf[0m[0m at [0;32m/builds/idf/crosstool-NG/.build/xtensa-esp-elf/build/build-picolibc-build-x86_64-build_pc-linux-gnu/../../../src/picolibc-git-1738c754/newlib/libc/tinystdio/snprintf.c[0m[0m:[1;31m42[0m
+[0m--- 0x400db6dc: [0;33mpublish_task[0m[0m at [0;32mC:/Users/haziq/CLionProjects/EMG+DSP+Telemetry/main/network.c[0m[0m:[1;31m157[0m
+[0m--- 0x4016a6f2: [0;33mvPortTaskWrapper[0m[0m at [0;32mC:/Users/haziq/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m143[0m
+[0m

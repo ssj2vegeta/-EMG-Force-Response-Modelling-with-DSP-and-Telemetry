@@ -1,1 +1,0 @@
-Command: C:\esp\tools\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe -m espefuse -p COM3 --chip esp32 summary

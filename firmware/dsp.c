@@ -33,17 +33,13 @@ void dsp_task(void *params)
     {
         xQueueReceive(sample_queue, &raw, portMAX_DELAY);
 
-        // cast to float
         float sample = (float)raw;
 
-        // DC removal
         running_mean += (sample - running_mean) / 1000.0f;
         float dc_removed = sample - running_mean;
 
-        // Rectification
         float rectified = fabsf(dc_removed);
 
-        // RMS sliding window
         sum_sq -= window[window_idx] * window[window_idx];
         window[window_idx] = rectified;
         sum_sq += rectified * rectified;

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project sits at the intersection of my physics background and my interest in hardware, software, and quantitative research — building a full real-time EMG acquisition and analysis pipeline from the ground up, grounded in peer-reviewed methodology, on an ESP32 microcontroller.
+This project sits at the intersection of my physics background and my interest in hardware, software, and quantitative research — building a full real-time EMG acquisition and analysis pipeline and compared with peer-reviewed literature, on an ESP32 microcontroller.
 
 There is no universally confirmed mathematical EMG-force relationship. I've tried to model it for biceps brachii during isometric contractions, fitting linear and power-law models and comparing the fitted exponent b to published values from Huang et al. (2023). Even that paper makes simplifying assumptions — the simulation uses a cylindrical muscle model (Fuglevand model) with three motor unit depth conditions to explain the spatial dependence of b across the electrode array. The real biceps is not a cylinder. That tension between a proposed model with simplified assumptions and reality makes this interesting. 
 

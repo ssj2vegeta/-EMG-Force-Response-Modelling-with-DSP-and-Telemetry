@@ -25,7 +25,7 @@ There is no universally confirmed mathematical EMG-force relationship. I've trie
 
 Four tasks: sampling ISR at highest priority, all other tasks at lower priority. Sampling and DSP pinned to core 1. WiFi and MQTT pinned to core 0 — physically isolating the sampling/dsp tasks from mqtt/wifi which are resource intensive. 
 
-The 4096-entry sample queue between the ISR and DSP task is the key design decision — the ISR never blocks waiting for DSP processing, drops the sample and returns immediately. Without this decoupling, sample loss is inevitable.
+The sample queue between the ISR and DSP task is key — the ISR never blocks waiting for DSP processing, drops the sample and returns immediately. 
 
 **DSP pipeline:** DC removal (exponential running mean, removes baseline drift), rectification (prepares signal for amplitude estimation), RMS windowing (250ms sliding window, standard amplitude measure in EMG literature — Lawrence & De Luca, 1983).
 

@@ -7,9 +7,8 @@ This project sits at the intersection of my physics background and my interest i
 There is no universally confirmed mathematical EMG-force relationship. I've tried to model it for biceps brachii during isometric contractions, fitting linear and power-law models and comparing the fitted exponent b to published values from Huang et al. (2023). Even that paper makes simplifying assumptions — the simulation uses a cylindrical muscle model (Fuglevand model) with three motor unit depth conditions to explain the spatial dependence of b across the electrode array. The real biceps is not a cylinder. That tension between a proposed model with simplified assumptions and reality makes this interesting. 
 
 
-## Hardware
-
-**TO DO**
+**Hardware — TO DO**
+Add wiring table, photo of setup, MyoWare specs, electrode placement photo.
 
 ## Debugging (Hardware)
 
@@ -45,10 +44,25 @@ Two scripts run from the `analysis/` directory.
 **analysis.py** — run after the session. Reads the CSV, extracts the middle 5 seconds of each trial, aggregates across 3 reps per force level to get mean RMS and standard error, fits linear and power-law models using weighted least squares using scipy, computes bootstrap CI on the power-law exponent b, runs AIC model comparison, and generates results plots.
 
 
+## Signal Acquisition
 
-## Results
 
-**TO DO**
+**Signal acquisition:**
+
+MyoWare 2.0 muscle sensor, RECT output (200x gain, 20–498Hz bandpass, hardware full-wave rectification). Sampled at 1kHz via ESP32 ADC (12-bit, GPIO35). Electrode placement following SENIAM guidelines for biceps brachii — 1/3 of the distance from the cubital fossa toward the acromion, aligned along the muscle fibre direction. Reference electrode on wrist.
+
+**DSP pipeline (firmware):** DC removal via exponential running mean, rectification (redundant for RECT output but harmless), 250ms RMS sliding window. Output published over MQTT at 10Hz.
+
+## Experimental Protocol
+
+**Experimental protocol:** Isometric bicep curls at 20, 40, 60, and 75% MVC. MVC estimated from maximum dumbbell mass and forearm moment arm. Three repetitions per force level, 10s holds, 30s rest between repetitions. Trial timestamps noted from terminal output during session.
+
+**Analysis:** Middle 5 seconds of each hold extracted to avoid onset/offset transients. Three reps per force level averaged to give mean RMS and standard error. Linear and power-law models fitted using weighted least squares (scipy.optimize.curve_fit, sigma=SE, absolute_sigma=True). Bootstrap CI on power-law exponent b (1000 resamples, 2.5th–97.5th percentiles). AIC used for model comparison. Fitted b compared against Huang et al. (2023) distal biceps value of 1.04 ± 0.14.
+
+
+
+**Results — TO DO**
+Run experimental sessions, fill in timestamps, run analysis.py, paste fitted b value, bootstrap CI, AIC result, and save emg_force_results.png.
 
 
 ## Limitations
